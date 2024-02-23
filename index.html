@@ -24,11 +24,11 @@ let displayTime=document.getElementById("displayTime")
 
 function stopwatch(){
     seconds++;
-    if(seconds==60){
+    if(seconds==10){
+        document.getElementById("my_audio").play();
         seconds=0;
         minutes++
         if(minutes==60){
-            document.getElementById("my_audio").play();
             minutes=0;
             hours++;
         }
