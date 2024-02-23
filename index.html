@@ -8,7 +8,8 @@
 
 </head>
 <body>
-    <div class="stopwatch">
+    <audio id="my_audio" src="WhatsApp Audio 2024-02-23 at 6.40.40 AM.mpeg" ></audio>   
+     <div class="stopwatch">
         <h1 id="displayTime">00:00:00</h1>
         <div class="buttons">
             <img src="images/stop.png" onclick="watchstop()" >
@@ -27,8 +28,9 @@ function stopwatch(){
         seconds=0;
         minutes++
         if(minutes==60){
+            document.getElementById("my_audio").play();
             minutes=0;
-            hours++
+            hours++;
         }
     }
     let h= hours <10 ? "0"+hours : hours; 
